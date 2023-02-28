@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container-fluid main-container" style="padding-left: 0px; padding-right: 0px; padding-bottom: 0px; user-select: auto;">  
+  
+  <video id="background_video" style="width: 100vw; height: 100vh; object-fit: cover; position: fixed; top: 0px; left: 0px; z-index: -1; user-select: auto;" muted="" poster="" playsinline="" autoplay="" loop="" preload="auto">
+      <source src="https://d3j8buaepzkvqi.cloudfront.net/mp4/Video_Preview.mp4" type="video/mp4" style="user-select: auto;">
+  </video>
+
+  <div class="container" id="wc-container" style="user-select: auto;">
+  <div class="row" id="main_row" style="user-select: auto;">
+  
+  
+  
+  
+    <div class="col-lg-8 offset-lg-2 col-xl-4 offset-xl-4 card py-5" id="main_heading" style="margin-top: 24px;margin-bottom: 24px;border-radius: 1rem;background-color: rgba(255, 255, 255, 0.87);user-select: auto;">
+  
+  
+                            
+  
+                <div class="row" style="user-select: auto;">
+                    <div class="col-md-12 mb-3 pc-only" style="text-align: center; user-select: auto;">
+  
+                      <img class="pc-only mt-3" src="https://webceph.s3.amazonaws.com/static/img/LOGO_60.png" style="height: 25px; margin-bottom: 15px; user-select: auto;">
+                      <h3 class="feature-heading mb-2 pc-only" style="user-select: auto;">디지털 인공지능 치의학시대로의 도약</h3>
+                    </div>
+                    <div class="col-md-12" style="padding-left: 0px; padding-right: 0px; user-select: auto;">
+                          
+                <div id="main_formset" style="min-height: 450px; user-select: auto;">
+                  
+                <!-- multistep form -->
+
+                <form method="post" action="{% url 'common:signup' %}">
+             
+                  <fieldset id="fieldset_stage_1" style="background: white;
+                  border: 0 none;
+                  border-radius: 1.0rem;
+                  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.07);
+                  padding: 20px 30px;
+                  box-sizing: border-box;
+                  width: 90%;
+                  margin: 0 5%;
+                  
+                  /*stacking fieldsets above each other*/
+                  position: relative;">
+                    
+
+                      {% csrf_token %}
+                      {% include "form_errors.html" %}
+
+                    <div style="text-align: left; user-select: auto;">
+
+                    <div class="form-row" style="user-select: auto;">
+                      <div class="form-group col-6 mb-0" style="width:100%; user-select: auto;">
+                        
+                        <div id="div_id_first_name" class="form-group" style="user-select: auto;">
+                            
+                                <label for="id_first_name" class="control-label " style="user-select: auto;">
+                                    이름*
+                                </label>
+
+                                    <div class="controls " style="user-select: auto;">
+                                      <input type="text" class="form-control" name="username" id="username" style="width:100%; user-select: auto;"
+                                      value="{{ form.username.value|default_if_none:'' }}">
+                                    </div>  
+                        </div>
+                      </div>
+                    </div>
+                    
+                        <div id="div_id_email" class="form-group" style="user-select: auto;">
+                            
+                                <label for="id_email" class="control-label  requiredField" style="user-select: auto;">
+                                    이메일<span class="asteriskField" style="user-select: auto;">*</span>
+                                </label>
+            
+                                    <div class="controls " style="user-select: auto;">
+                                      <input type="text" class="form-control" name="email" id="email"  style="width:100%; user-select: auto;"
+                                      value="{{ form.email.value|default_if_none:'' }}">
+                                    </div>   
+                        </div>
+      
+  
+  
+                    <div class="form-row" style="user-select: auto;">
+                      <div class="form-group col-6 mb-0" style="width:100%; user-select: auto;">
+                        <div id="div_id_password1" class="form-group" style="user-select: auto;">
+          
+                          <label for="id_password1" class="control-label  requiredField" style="user-select: auto;">
+                              비밀번호<span class="asteriskField" style="user-select: auto;">*</span>
+                          </label>
+        
+                          <div class="controls " style="user-select: auto;">
+                            <input type="password" class="form-control" name="password1" id="password1"  style="width:100%; user-select: auto;"
+                            value="{{ form.password1.value|default_if_none:'' }}">
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                    <div class="form-group col-6 mb-0" style="width:100%; user-select: auto;">
+                      <div id="div_id_password2" class="form-group" style="user-select: auto;">
+          
+                      <label for="id_password2" class="control-label  requiredField" style="user-select: auto;">
+                          비밀번호 확인<span class="asteriskField" style="user-select: auto;">*</span>
+                      </label>
+        
+                      <div class="controls " style="user-select: auto;">
+                        <input type="password" class="form-control" name="password2" id="password2"  style="width:100%; user-select: auto;"
+                        value="{{ form.password2.value|default_if_none:'' }}">
+                      </div>    
+                      </div>
+                    </div>
+                      
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary" style="width:100%; margin-top:5%; background-image: linear-gradient(to right, #2a31ff, #8705ff,#2a31ff, #8705ff);">생성하기</button>
+                  
+                  </fieldset>
+                </form>
+                  
+                </div>
+  
+                    <p class="pc-only app_banner" style="justify-content: center; display: flex; user-select: auto;">앱을 다운로드하세요.</p>
+  
+                    <div class="row main-buttons app_banner" style=" width:100%; text-align:center; display: flex; user-select: auto;">
+                      
+                        <a class="" href="https://play.google.com/store/apps/details?id=com.assemblecircle.webceph" style="margin-right: 8px; user-select: auto;">
+                          <img alt="Available on Google Play" class="Rt8TI " src="https://d3j8buaepzkvqi.cloudfront.net/img/playstore.png" style="height: 40px; user-select: auto;">
+                        </a>
+                        <a class="" href="https://apps.apple.com/app/webceph/id1534844081" style="margin-top:3%; user-select: auto;">
+                          <img alt="Available on the App Store" class="Rt8TI " src="https://d3j8buaepzkvqi.cloudfront.net/img/appstore.png" style="height: 40px; user-select: auto;">
+                        </a>
+                    </div> 
+ 
+                    <p class="company-copyright" style="text-align: center; margin-top: 40px; user-select: auto;">(주)어셈블써클 © 2022 </p>
+
+                    </div>
+                </div>
+        
+  
+  
+  
+    </div>
+  
+  </div>
+  
+              
+                       
+  
+  </div>
+  
+
+  
+  </div>
+{% endblock %}

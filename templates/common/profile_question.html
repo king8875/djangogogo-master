@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load pybo_filter %}
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://pybo.kr/common/profile/question/1431/ -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="https://pybo.kr/static/img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./user_question_files/bootstrap.min.css">
+    <!-- pybo CSS -->
+    <link rel="stylesheet" type="text/css" href="./user_question_files/style.css">
+    <!-- Font Awesome JS -->
+    <link href="./user_question_files/all.min.css" rel="stylesheet"> <!--CDN 링크 --> <title>파이보</title></head>
+    
+
+<body>
+<!-- 네비게이션바 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="https://pybo.kr/pybo/">펭수</a>
+        <a href="https://pybo.kr/pybo/" class="nav-link text-light">점프 투 게시판</a>
+
+        <!--
+        <a href="https://wikidocs.net/105844" class="nav-link text-warning small">
+            <span class="badge badge-success">news</span> 《Do it! 점프 투 장고》 책 출간!
+        </a>
+        -->
+
+        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://pybo.kr/common/profile/ranking/"><i class="fas fa-trophy"></i> 랭킹</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://pybo.kr/pybo/recent_list/"><i class="fas fa-history"></i> 최근이력</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://pybo.kr/common/settings/base/"><i class="fas fa-cog"></i> 계정설정</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link profile-link active" href="https://pybo.kr/common/profile/base/1431/"><i class="fas fa-user-alt"></i> 박지혁</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://pybo.kr/common/logout/"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12 col-md-3 col-lg-2 p-2">
+            <!-- Sidebar  -->
+<nav id="sidebar" class="border-top border-secondary">
+    <div class="list-group">
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="https://pybo.kr/pybo/question/list/qna/">질문과답변</a>
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="https://pybo.kr/pybo/question/list/free/">자유게시판</a>
+        <!--
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="/pybo/question/list/tip/">팁과강좌</a>
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="/pybo/question/list/quiz/">파이썬퀴즈</a>
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="/pybo/question/list/news/">새로운소식</a>
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="/pybo/question/list/job/">구인구직</a>
+        -->
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="https://pybo.kr/pybo/question/list/bug/">버그및건의</a>
+    </div>
+</nav>
+
+
+<ul class="my-3 small" style="padding-left:2em;">
+    <li class="my-1"><a href="https://wikidocs.net/book/1" target="_blank">점프 투 파이썬</a></li>
+    <li class="my-1"><a href="https://wikidocs.net/book/4223" target="_blank">점프 투 장고</a></li>
+    <li class="my-1"><a href="https://wikidocs.net/book/4542" target="_blank">점프 투 플라스크</a></li>
+    <li class="my-1"><a href="https://wikidocs.net/book/31" target="_blank">점프 투 자바</a></li>
+    <li class="my-1"><a href="https://wikidocs.net/book/7601" target="_blank">점프 투 스프링부트</a></li>
+    <li class="my-1"><a href="https://wikidocs.net/book/8531" target="_blank">점프 투 FastAPI</a></li>
+    <li class="my-1"><a href="https://wikidocs.net/book/5445" target="_blank">점프 투 파이썬 <br>(라이브러리 예제편)</a></li>
+</ul>
+
+
+<!--
+<a href="https://wikidocs.net/105844"><img src="https://i.imgur.com/wmSBiqU.jpg" class="d-block my-3"></a>
+<a href="https://wikidocs.net/4321"><img src="https://i.imgur.com/WG61Vwk.jpg" class="mx-auto d-block my-2"></a>
+<a href="https://wikidocs.net/102760"><img src="https://i.imgur.com/dJkcLOc.jpg" class="mx-auto d-block my-2"></a>
+-->
+
+        </div>
+        <div class="col-sm-12 col-md-9 col-lg-10 p-2">
+            <div id="content" class="border-top border-secondary">
+                <div class="content_block">
+                    
+<h5 class="border-bottom pb-2 mb-3">박지혁</h5>
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link " href="{% url 'pybo:user_profile' %}">기본정보</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="{% url 'pybo:user_question' %}">게시</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="{% url 'pybo:user_answer' %}">답변</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="{% url 'pybo:user_comment' %}">댓글</a>
+    </li>
+</ul>
+
+
+<div class="btn-group my-3" role="group">
+  <button type="button" title="" class="btn btn-sm btn-secondary so active" data-so="recent" data-original-title="최신순"><i class="fas fa-list"></i></button>
+  <button type="button" title="" class="btn btn-sm btn-secondary so " data-so="recommend" data-original-title="추천순"><i class="fas fa-thumbs-up"></i></button>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-sm">
+        <thead>
+        <tr class="text-center" style="background-color:#fafafa">
+            <th>번호</th>
+            <th style="width:55%">제 목</th>
+            <th>추천</th>
+            <th>구분</th>
+            <th>날짜</th>
+        </tr>
+    </thead>
+    <!-- {% for cat in category %} 
+        {{cat}}</td>  
+    {% endfor %} -->
+    <tbody>
+        {% if question_list %}
+        {% for question in question_list %}         
+        {% if request.user == question.author %}
+        <!-- quesx cate o -->
+        <tr class="text-center">
+            <td>
+                <!-- 번호 = 전체건수 - 시작인덱스 - 현재인덱스 + 1 -->
+                {{ question.id }}
+            </td>
+            <td class="text-start">
+                <a href="{% url 'pybo:detail' question.id %}">{{ question.subject}}</a>
+                
+                    
+                    <td>{{question.voter.count}}</td>
+                    <td>{{question.category.description}}</td>
+                    
+                      <!-- 글쓴이 추가 -->
+                    
+                    
+                    <td>{{ question.create_date }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                {% else %}
+                <tr>
+                    <td colspan="4">질문이 없습니다.</td>
+                </tr>
+                {% endif %}
+                
+        </tbody>
+</table>
+</div>
+<!-- 질문목록 페이징 -->
+<!-- 페이징처리 시작 -->
+
+
+<ul class="pagination pagination-sm justify-content-center">
+
+    <!-- 이전페이지 -->
+    
+    <li class="page-item disabled">
+        <a class="page-link" tabindex="-1" aria-disabled="true" href="javascript:void(0);">이전</a>
+    </li>
+    
+
+    <!-- 첫페이지 -->
+    
+
+    <!-- 페이지리스트 -->
+    
+        <!--  앞 페이지 생략 -->
+        
+        
+            
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" data-page="1" href="javascript:void(0);">1</a>
+            </li>
+            
+        
+        <!--  뒤 페이지 생략 -->
+        
+    
+
+    <!-- 마지막페이지 -->
+    
+
+    <!-- 다음페이지 -->
+    
+    <li class="page-item disabled">
+        <a class="page-link" tabindex="-1" aria-disabled="true" href="javascript:void(0);">다음</a>
+    </li>
+    
+</ul>
+
+<!-- 페이징처리 끝 -->
+<form id="searchForm" method="get">
+    <input type="hidden" id="page" name="page" value="1">
+    <input type="hidden" id="so" name="so" value="recent">
+</form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container mt-3">
+        <span class="text-muted">©2020 • PYBO.KR</span>
+        <div class="float-right small"><a href="https://pybo.kr/common/privacy/">개인정보취급방침</a></div>
+    </div>
+</footer>
+
+<!-- jQuery JS -->
+<script src="./user_question_files/jquery-3.4.1.min.js.다운로드"></script>
+<!-- Bootstrap JS -->
+<script src="./user_question_files/popper.min.js.다운로드" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="./user_question_files/bootstrap.min.js.다운로드"></script>
+<!-- 자바스크립트 Start -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".page-link").on('click', function() {
+        $("#page").val($(this).data("page"));
+        $("#searchForm").submit();
+    });
+
+    $(".so").on('click', function() {
+        $("#so").val($(this).data("so"));
+        $("#page").val(1);
+        $("#searchForm").submit();
+    });
+
+    var profile_id = "1431";
+    var user_id = "1431";
+    if(profile_id == user_id) {
+        $(".profile-link").addClass("active");
+    }
+
+    $('.so').tooltip();
+    $('[data-toggle="popover"]').popover();
+});
+</script>
+
+
+<!-- 자바스크립트 End -->
+
+</body></html>
+{% endblock %}

@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+
+<!-- saved from url=(0041)https://pybo.kr/common/profile/base/1431/ -->
+<html lang="ko" style="user-select: auto;"><head style="user-select: auto;"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" style="user-select: auto;">
+    <link rel="shortcut icon" type="image/x-icon" href="https://pybo.kr/static/img/favicon.ico" style="user-select: auto;">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./유저프로파일_files/bootstrap.min.css" style="user-select: auto;">
+    <!-- pybo CSS -->
+    <link rel="stylesheet" type="text/css" href="./유저프로파일_files/style.css" style="user-select: auto;">
+    <!-- Font Awesome JS -->
+    <link href="./유저프로파일_files/all.min.css" rel="stylesheet" style="user-select: auto;"> <!--CDN 링크 --> <title style="user-select: auto;">파이보</title></head>
+    
+
+<body style="user-select: auto;">
+<!-- 네비게이션바 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="user-select: auto;">
+    <div class="container" style="user-select: auto;">
+        <a class="navbar-brand" href="https://pybo.kr/pybo/" style="user-select: auto;">PyBo</a>
+        <a href="https://pybo.kr/pybo/" class="nav-link text-light" style="user-select: auto;">점프 투 게시판</a>
+
+        <!--
+        <a href="https://wikidocs.net/105844" class="nav-link text-warning small">
+            <span class="badge badge-success">news</span> 《Do it! 점프 투 장고》 책 출간!
+        </a>
+        -->
+
+        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="user-select: auto;">
+            <i class="fas fa-align-justify" style="user-select: auto;"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="user-select: auto;">
+            <ul class="nav navbar-nav ml-auto" style="user-select: auto;">
+                <li class="nav-item " style="user-select: auto;">
+                    <a class="nav-link" href="https://pybo.kr/common/profile/ranking/" style="user-select: auto;"><i class="fas fa-trophy" style="user-select: auto;"></i> 랭킹</a>
+                </li>
+                <li class="nav-item " style="user-select: auto;">
+                    <a class="nav-link" href="https://pybo.kr/pybo/recent_list/" style="user-select: auto;"><i class="fas fa-history" style="user-select: auto;"></i> 최근이력</a>
+                </li>
+                
+                <li class="nav-item " style="user-select: auto;">
+                    <a class="nav-link" href="https://pybo.kr/common/login/" style="user-select: auto;"><i class="fas fa-sign-in-alt" style="user-select: auto;"></i> 로그인</a>
+                </li>
+                <li class="nav-item " style="user-select: auto;">
+                    <a class="nav-link" href="https://pybo.kr/common/signup/" style="user-select: auto;"><i class="fas fa-user-plus" style="user-select: auto;"></i> 회원가입</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container mt-3" style="user-select: auto;">
+    <div class="row" style="user-select: auto;">
+        <div class="col-sm-12 col-md-3 col-lg-2 p-2" style="user-select: auto;">
+            <!-- Sidebar  -->
+<nav id="sidebar" class="border-top border-secondary" style="user-select: auto;">
+    <div class="list-group" style="user-select: auto;">
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="https://pybo.kr/pybo/question/list/qna/" style="user-select: auto;">질문과답변</a>
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="https://pybo.kr/pybo/question/list/free/" style="user-select: auto;">자유게시판</a>
+        <!--
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="/pybo/question/list/tip/">팁과강좌</a>
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="/pybo/question/list/quiz/">파이썬퀴즈</a>
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="/pybo/question/list/news/">새로운소식</a>
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="/pybo/question/list/job/">구인구직</a>
+        -->
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="https://pybo.kr/pybo/question/list/bug/" style="user-select: auto;">버그및건의</a>
+    </div>
+</nav>
+
+
+<ul class="my-3 small" style="padding-left: 2em; user-select: auto;">
+    <li class="my-1" style="user-select: auto;"><a href="https://wikidocs.net/book/1" target="_blank" style="user-select: auto;">점프 투 파이썬</a></li>
+    <li class="my-1" style="user-select: auto;"><a href="https://wikidocs.net/book/4223" target="_blank" style="user-select: auto;">점프 투 장고</a></li>
+    <li class="my-1" style="user-select: auto;"><a href="https://wikidocs.net/book/4542" target="_blank" style="user-select: auto;">점프 투 플라스크</a></li>
+    <li class="my-1" style="user-select: auto;"><a href="https://wikidocs.net/book/31" target="_blank" style="user-select: auto;">점프 투 자바</a></li>
+    <li class="my-1" style="user-select: auto;"><a href="https://wikidocs.net/book/7601" target="_blank" style="user-select: auto;">점프 투 스프링부트</a></li>
+    <li class="my-1" style="user-select: auto;"><a href="https://wikidocs.net/book/8531" target="_blank" style="user-select: auto;">점프 투 FastAPI</a></li>
+    <li class="my-1" style="user-select: auto;"><a href="https://wikidocs.net/book/5445" target="_blank" style="user-select: auto;">점프 투 파이썬 <br style="user-select: auto;">(라이브러리 예제편)</a></li>
+</ul>
+
+
+<!--
+<a href="https://wikidocs.net/105844"><img src="https://i.imgur.com/wmSBiqU.jpg" class="d-block my-3"></a>
+<a href="https://wikidocs.net/4321"><img src="https://i.imgur.com/WG61Vwk.jpg" class="mx-auto d-block my-2"></a>
+<a href="https://wikidocs.net/102760"><img src="https://i.imgur.com/dJkcLOc.jpg" class="mx-auto d-block my-2"></a>
+-->
+
+        </div>
+        <div class="col-sm-12 col-md-9 col-lg-10 p-2" style="user-select: auto;">
+            <div id="content" class="border-top border-secondary" style="user-select: auto;">
+                <div class="content_block" style="user-select: auto;">
+                    
+<h5 class="border-bottom pb-2 mb-3" style="user-select: auto;">박지혁</h5>
+<ul class="nav nav-tabs" style="user-select: auto;">
+    <li class="nav-item" style="user-select: auto;">
+        <a class="nav-link active" href="{% url 'pybo:user_profile' %}" style="user-select: auto;">기본정보</a>
+    </li>
+    <li class="nav-item" style="user-select: auto;">
+        <a class="nav-link " href="{% url 'pybo:user_question' %}" style="user-select: auto;">게시</a>
+    </li>
+    <li class="nav-item" style="user-select: auto;">
+        <a class="nav-link " href="{% url 'pybo:user_answer' %}" style="user-select: auto;">답변</a>
+    </li>
+    <li class="nav-item" style="user-select: auto;">
+        <a class="nav-link " href="{% url 'pybo:user_comment' %}" style="user-select: auto;">댓글</a>
+    </li>
+</ul>
+<div id="profile_base" style="user-select: auto;">
+    
+    <div class="profile_title" style="user-select: auto;">
+        파이보 스코어 <small class="text-muted" style="user-select: auto;"></small>
+        <a href="javascript:void(0);" data-toggle="popover" data-placement="right" data-content="게시(5점) 답변(5점) 댓글(3점) 추천하기(1점) 추천받음(1점)" data-original-title="" title="" style="user-select: auto;">
+          <i class="fas fa-question-circle text-danger" style="user-select: auto;"></i>
+        </a>
+    </div>
+    <p class="mb-4" style="user-select: auto;"><strong style="user-select: auto;">0</strong> 점</p>
+    <div class="profile_title" style="user-select: auto;">한줄소개</div>
+    <p class="mb-4" style="user-select: auto;">나는 누구고 여긴 어디인가?</p>
+    <div class="profile_title" style="user-select: auto;">첫번째 컴퓨터</div>
+    <p class="mb-4" style="user-select: auto;">애니악</p>
+    <div class="profile_title" style="user-select: auto;">좋아하는 에디터</div>
+    <p class="mb-4" style="user-select: auto;">도구는 도구일뿐</p>
+</div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer class="footer" style="user-select: auto;">
+    <div class="container mt-3" style="user-select: auto;">
+        <span class="text-muted" style="user-select: auto;">©2020 • PYBO.KR</span>
+        <div class="float-right small" style="user-select: auto;"><a href="https://pybo.kr/common/privacy/" style="user-select: auto;">개인정보취급방침</a></div>
+    </div>
+</footer>
+
+<!-- jQuery JS -->
+<script src="./유저프로파일_files/jquery-3.4.1.min.js.download" style="user-select: auto;"></script>
+<!-- Bootstrap JS -->
+<script src="./유저프로파일_files/popper.min.js.download" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" style="user-select: auto;"></script>
+<script src="./유저프로파일_files/bootstrap.min.js.download" style="user-select: auto;"></script>
+<!-- 자바스크립트 Start -->
+
+<script type="text/javascript" style="user-select: auto;">
+$(document).ready(function(){
+    $(".page-link").on('click', function() {
+        $("#page").val($(this).data("page"));
+        $("#searchForm").submit();
+    });
+
+    $(".so").on('click', function() {
+        $("#so").val($(this).data("so"));
+        $("#page").val(1);
+        $("#searchForm").submit();
+    });
+
+    var profile_id = "1431";
+    var user_id = "None";
+    if(profile_id == user_id) {
+        $(".profile-link").addClass("active");
+    }
+
+    $('.so').tooltip();
+    $('[data-toggle="popover"]').popover();
+});
+</script>
+
+
+<!-- 자바스크립트 End -->
+
+</body></html>
+{% endblock %}

@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="../sass/login.css">
+
+
+{% extends "base.html" %}
+{% block content %}
+
+
+<!--https://d3j8buaepzkvqi.cloudfront.net/mp4/Video_Preview.mp4-->
+
+<div class="container-fluid main-container">
+
+    
+    
+    <video id="background_video1" style="width: 100%; height: 100vh; object-fit: cover; position: fixed; top: 0px; left: 0px; z-index: -1; user-select: auto;" muted="muted" poster="" playsinline="" autoplay="autoplay"  preload="auto">
+        <source src="https://vod-progressive.akamaized.net/exp=1675198555~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F232%2F18%2F451164052%2F1984878240.mp4~hmac=2aa2d00754102b2f8ac275cdcf9fe9c8b9fb2a78a73036c2af00d017fbff6fa5/vimeo-prod-skyfire-std-us/01/232/18/451164052/1984878240.mp4"  type="video/mp4" style="user-select: auto;" >
+        <source src="https://vod-progressive.akamaized.net/exp=1675198450~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2593%2F22%2F562965796%2F2661999829.mp4~hmac=ce05004eb0a53a18c733e361738d06174f4cf54c3b6e71212e01fefb18bddbb5/vimeo-prod-skyfire-std-us/01/2593/22/562965796/2661999829.mp4"  type="video/mp4" style="user-select: auto;" >
+        <source src="https://vod-progressive.akamaized.net/exp=1675198589~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2600%2F22%2F563001938%2F2662171255.mp4~hmac=0922ddacd1726b44294ec87441a4099963e0d68b1766ea27a323db8973ccf1e7/vimeo-prod-skyfire-std-us/01/2600/22/563001938/2662171255.mp4"  type="video/mp4" style="user-select: auto;" >
+    </video>
+   
+
+
+    <div class="container" id="wc-container" style="user-select: auto;">
+
+        <div class="row mobile-only" style="user-select: auto;">
+            <div class="col-12" style="text-align: center; margin-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 50px; width: 100%; user-select: auto;">
+                <h3 class="feature-heading mb-2 heading_mention pc-only" style="user-select: auto;"></h3>
+            </div>
+        </div>
+
+        <div class="row" id="main_row" style="user-select: auto;">
+
+
+            <!-- <div class="col-md-6 pc-only" style="text-align: left; margin-bottom: 0px; padding-left: 0px;"> -->
+
+            <!-- <img class="featurette-image img-fluid mx-auto" id="main_image_1" src="https://d3j8buaepzkvqi.cloudfront.net/img/treatment.gif"alt=""> -->
+            <!-- <video style="width: 100%; margin-top: 24px;" muted="" poster="https://d3j8buaepzkvqi.cloudfront.net/img/main-02_resized.png" playsinline="" autoplay="" loop="" preload="auto">
+                <source src="https://d3j8buaepzkvqi.cloudfront.net/mp4/0304_main.mp4" type="video/mp4">
+            </video> -->
+            <!-- </div> -->
+
+            <div class="col-lg-8 offset-lg-2 col-xl-4 offset-xl-4" style="padding: 0px; user-select: auto;">
+
+                <div id="main_heading" style="padding-left: 10px;padding-right: 10px;background-color: rgba(255, 255, 255, 0.87);user-select: auto; border-radius: 1rem; box-shadow: 0 0 15px 1px rgb(0 0 0 / 40%); ">
+
+                    <div class="row" style="padding-top: 2rem; user-select: auto;">
+                        <div class="col-md-12 mb-3" style="text-align: center; user-select: auto;">
+
+                            <h3 class="pc-only"  style="height: 25px; margin-bottom: 15px; user-select: auto;">DOG AND CAT</h3>
+                            <h3 class="feature-heading mb-5 pc-only heading_mention" style="user-select: auto;">디지털 알렉산더의 모험</h3>
+                            <h3 class="feature-heading mb-3 mobile-only" style="user-select: auto;">로그인</h3>
+                        </div>
+                        <div class="col-md-12" style="user-select: auto;"></div>
+                    </div>
+
+
+
+
+                    <div style="user-select: auto;">
+
+                        <!-- <hr> -->
+
+                        <div class="row" style="text-align: center; user-select: auto; " >
+                            <div class="col-md-12" style="user-select: auto;">
+                                <!-- <h3 class="feature-heading">로그인</h3> -->
+                            </div>
+                            <!-- <div class="col-md-8 offset-md-2" style="padding-left: 15px; padding-right: 15px;"> -->
+                            <div class="col-md-12" style="padding-left: 15px; padding-right: 15px; user-select: auto;">
+                                <form method="post" action="{% url 'common:login' %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="next" value="{{ next }}">  <!-- 로그인 성공후 이동되는 URL -->
+
+                                    {% include "form_errors.html" %}
+                                    <div class="mb-3">
+                                        <label for="username">사용자ID</label>
+                                        <input type="text" class="form-control" name="username" id="username"
+                                               value="{{ form.username.value|default_if_none:'' }}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password">비밀번호</label>
+                                        <input type="password" class="form-control" name="password" id="password"
+                                               value="{{ form.password.value|default_if_none:'' }}">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">로그인</button>
+                                </form>
+<!--                                <form method="POST" id="login_submit_form" style="user-select: auto;">-->
+<!--                                    <input type="hidden" name="csrfmiddlewaretoken" value="WcFuNSPa74NdWQZHycsmlTgYxq7Yq5KF5ZxQ4xiSsKX08UMLxfIN75jkuocXaqFR" style="user-select: auto;">-->
+
+
+<!--                                    <div id="div_id_email" class="form-group" style="user-select: auto;">-->
+<!--                                        <label for="id_email" class="control-label  requiredField" style="user-select: auto;">-->
+<!--                                        이메일<span class="asteriskField" style="user-select: auto;">*</span>-->
+<!--                                        </label>-->
+
+<!--                                        <div class="controls " style="user-select: auto;">-->
+<!--                                        <input type="text" name="email" autofocus="" autocapitalize="off" class="textinput textInput form-control" required="" id="id_email" style="user-select: auto;">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                    <div id="div_id_password" class="form-group" style="user-select: auto;">-->
+<!--                                        <label for="id_password" class="control-label  requiredField" style="user-select: auto;">-->
+<!--                                        비밀번호<span class="asteriskField" style="user-select: auto;">*</span>-->
+<!--                                        </label> <div class="controls " style="user-select: auto;">-->
+<!--                                        <input type="password" name="password" class="textinput textInput form-control" required="" id="id_password" style="user-select: auto;">-->
+<!--                                    </div>-->
+<!--                                    </div>-->
+
+<!--                                    <input type="hidden" id="next_url" name="next" value="" style="user-select: auto;">-->
+<!--                                    <input type="hidden" id="id_msg_listen" name="msg_listen" value="" style="user-select: auto;">-->
+<!--                                    <input type="hidden" id="id_msg_platform" name="msg_platform" value="" style="user-select: auto;">-->
+<!--                                    <input type="button" class="btn btn-hover color-3 btn-block" id="login_submit" value="로그인" style="user-select: auto;">-->
+<!--                                </form>-->
+                                <br style="user-select: auto;">
+                                <p style="user-select: auto;"> <a href="https://1021-121-134-166-70.jp.ngrok.io/pybo/password_reset" style="user-select: auto;">비밀번호를 잊으셨나요? </a>
+                                </p>
+                            </div>
+
+                            <div class="col-md-12" id="footer_login" style="padding-left: 0px; padding-right: 0px; user-select: auto;">
+                                <!-- <hr> -->
+                                <p style="margin-top: 8px; user-select: auto;">아직 dog and cat 회원이 아니신가요?
+                                    <a class="nav-link" href="{% url 'common:signup' %}">회원가입</a>
+                                </p>
+                            </div>
+
+
+                        </div>
+
+                        <hr style="margin-top: 0px; user-select: auto;">
+
+                        <p class="pc-only app_banner" style="justify-content: center; display: flex; user-select: auto;">앱을 다운로드하세요.</p>
+
+                        <div class="row main-buttons app_banner" style="justify-content: center; display: flex; user-select: auto; ">
+
+                            <a class="" href="https://play.google.com/store/apps/details?id=com.assemblecircle.webceph" style=" user-select: auto; ">
+                                <img alt="Available on Google Play" class="Rt8TI " src="https://d3j8buaepzkvqi.cloudfront.net/img/playstore.png" style="height: 40px; user-select: auto;">
+                            </a>
+                            <a class="" href="https://apps.apple.com/app/webceph/id1534844081" style="user-select: auto;">
+                                <img alt="Available on the App Store" class="Rt8TI " src="https://d3j8buaepzkvqi.cloudfront.net/img/appstore.png" style="height: 40px; user-select: auto;">
+                            </a>
+                        </div>
+
+                        <p class="company-copyright" style="text-align: center; margin-top: 20px; padding-bottom: 40px; user-select: auto;">AssembleCircle Corporation © 2022 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+<script>
+    document.getElementById('background_video1').play();
+</script>
+{% endblock %}
